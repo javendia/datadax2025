@@ -4,5 +4,7 @@ CREATE TABLE [md].[models]
   ,[name] NVARCHAR(150) NOT NULL UNIQUE
   ,[description] NVARCHAR(255) NULL
   ,[active] BIT NOT NULL DEFAULT(1) -- 0=inactive 1=active
+  ,[model_version] NVARCHAR(50) NOT NULL DEFAULT('1.0.0')
   ,[created_at] DATETIME2(7) NOT NULL DEFAULT(SYSDATETIME())
+  ,[updated_at] DATETIME2(7) NOT NULL DEFAULT(SYSDATETIME())
 )
