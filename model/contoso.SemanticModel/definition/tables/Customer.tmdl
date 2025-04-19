@@ -97,11 +97,6 @@ table Customer
 		summarizeBy: none
 		sourceColumn: Birthday
 
-		variation Variación
-			isDefault
-			relationship: 859c4caf-21d6-4861-ba1a-59d213ab68c3
-			defaultHierarchy: LocalDateTable_fb258960-8f74-49c3-b949-bb4df1e65b88.'Jerarquía de fechas'
-
 		annotation SummarizationSetBy = Automatic
 
 	column Age

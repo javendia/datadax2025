@@ -59,11 +59,6 @@ table Store
 		summarizeBy: none
 		sourceColumn: Open Date
 
-		variation Variación
-			isDefault
-			relationship: 26802e6b-b5a7-486a-ba54-b083466236ee
-			defaultHierarchy: LocalDateTable_81061522-7555-4cf7-8b27-b5b35483e14b.'Jerarquía de fechas'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
@@ -74,11 +69,6 @@ table Store
 		lineageTag: 06cd3eb2-8800-4d53-8f75-219f02e06c9e
 		summarizeBy: none
 		sourceColumn: Close Date
-
-		variation Variación
-			isDefault
-			relationship: 3c526610-20d3-4ab5-8c7e-2a31c2219edd
-			defaultHierarchy: LocalDateTable_40cbd2f1-e16b-4d8e-bc82-4192e39816b3.'Jerarquía de fechas'
 
 		annotation SummarizationSetBy = Automatic
 
