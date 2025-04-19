@@ -1,0 +1,137 @@
+table Product
+	lineageTag: 33592b84-f141-4679-9c96-6d42e75f1c40
+
+	column ProductKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 78cb485e-6672-4f6d-b5ae-1311146bfb5a
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Code'
+		dataType: string
+		lineageTag: 62f2e475-dff2-4b33-bf74-ab710fcc097f
+		summarizeBy: none
+		sourceColumn: Product Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Name'
+		dataType: string
+		lineageTag: b5ba2838-c3de-49e6-b32b-e968e6031eab
+		summarizeBy: none
+		sourceColumn: Product Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Manufacturer
+		dataType: string
+		lineageTag: 27b3df8a-c2ae-47c1-8c75-a10f3bc819e0
+		summarizeBy: none
+		sourceColumn: Manufacturer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brand
+		dataType: string
+		lineageTag: c11231ab-af50-4b65-a073-78ceab5f57f5
+		summarizeBy: none
+		sourceColumn: Brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column Color
+		dataType: string
+		lineageTag: 9a10e590-fde0-49c9-9b66-5c0f1cfbdebc
+		summarizeBy: none
+		sourceColumn: Color
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Weight Unit Measure'
+		dataType: string
+		lineageTag: 0c0d6e2c-f1cd-4bfa-b410-b40baebad360
+		summarizeBy: none
+		sourceColumn: Weight Unit Measure
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weight
+		dataType: double
+		lineageTag: be2a5cc4-c14d-4a55-bd64-f89634a0f864
+		summarizeBy: none
+		sourceColumn: Weight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Unit Cost'
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: ab6f7df2-0662-47ed-b025-751e9c9ac0b5
+		summarizeBy: none
+		sourceColumn: Unit Cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-ES"}
+
+	column 'Unit Price'
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 30fdb5d8-4086-4f5d-8195-ec094cce59c6
+		summarizeBy: none
+		sourceColumn: Unit Price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-ES"}
+
+	column 'Subcategory Code'
+		dataType: string
+		lineageTag: 1eaa7ff2-c791-4a2d-ae28-fff6dc4aef60
+		summarizeBy: none
+		sourceColumn: Subcategory Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Subcategory
+		dataType: string
+		lineageTag: bcc168fc-e8dd-4b7f-ad9a-a3839040266f
+		summarizeBy: none
+		sourceColumn: Subcategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Category Code'
+		dataType: string
+		lineageTag: 703ccfba-49a7-4305-ad43-5478149f5593
+		summarizeBy: none
+		sourceColumn: Category Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: 557935e1-4637-46b6-b688-0d57113d9e55
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Product = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("localhost", "Contoso10M"),
+				    dbo_Product = Origen{[Schema="dbo",Item="Product"]}[Data]
+				in
+				    dbo_Product
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

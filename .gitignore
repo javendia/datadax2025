@@ -1,2 +1,4 @@
 sql/semantic_model_generator/bin/Debug/
 sql/semantic_model_generator/obj/
+model/contoso.SemanticModel/.pbi/localSettings.json
+model/contoso.SemanticModel/.pbi/cache.abf
