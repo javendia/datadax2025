@@ -6,28 +6,21 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["Sales","Store","Product","Date","Customer","Currency Exchange"]
+annotation PBI_QueryOrder = ["Sales","Store","Product","Date","Customer","Currency Exchange","_Measures"]
 
-annotation __PBI_TimeIntelligenceEnabled = 1
+annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBIDesktopVersion = 2.141.1558.0 (25.03)+75b5f06a991f8f8a8a4d6b6fcd0f66e1ec2d6fdc
+annotation PBIDesktopVersion = 2.141.1754.0 (25.03)+e4409ed908ce97a5e9747f7dc48da475cf1c71a2
 
 annotation PBI_ProTooling = ["DevMode"]
 
 ref table Sales
-ref table DateTableTemplate_59958299-cc34-47c5-bd84-aa9fa0074834
-ref table LocalDateTable_85dfd3cb-5303-432b-83f6-1fd3532bb9dd
-ref table LocalDateTable_d364c0dd-6004-4f7e-a56d-2ff94ec6f82f
 ref table Store
-ref table LocalDateTable_81061522-7555-4cf7-8b27-b5b35483e14b
-ref table LocalDateTable_40cbd2f1-e16b-4d8e-bc82-4192e39816b3
 ref table Product
 ref table Date
-ref table LocalDateTable_c9753956-42bb-4dc3-8590-9d3e3a028a03
 ref table Customer
-ref table LocalDateTable_fb258960-8f74-49c3-b949-bb4df1e65b88
 ref table 'Currency Exchange'
-ref table LocalDateTable_3084252c-ac22-495c-9434-09db7af1a2c0
+ref table _Measures
 
 ref cultureInfo es-ES
 

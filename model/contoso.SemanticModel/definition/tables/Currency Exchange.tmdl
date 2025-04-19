@@ -8,11 +8,6 @@ table 'Currency Exchange'
 		summarizeBy: none
 		sourceColumn: Date
 
-		variation Variación
-			isDefault
-			relationship: d0d9e573-c6af-4dee-be7a-9954abdd1c6b
-			defaultHierarchy: LocalDateTable_3084252c-ac22-495c-9434-09db7af1a2c0.'Jerarquía de fechas'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date

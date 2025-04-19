@@ -1,17 +1,14 @@
 table Date
 	lineageTag: 56f411e2-7fc7-4d47-b5d2-7d10e26a08e6
+	dataCategory: Time
 
 	column Date
 		dataType: dateTime
+		isKey
 		formatString: Long Date
 		lineageTag: 6c70f83d-72c5-4daa-a336-424f1bcdcb1c
 		summarizeBy: none
 		sourceColumn: Date
-
-		variation Variación
-			isDefault
-			relationship: 8c7f09d2-b73a-4843-9212-5d09f6795915
-			defaultHierarchy: LocalDateTable_c9753956-42bb-4dc3-8590-9d3e3a028a03.'Jerarquía de fechas'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -21,7 +18,7 @@ table Date
 		dataType: int64
 		formatString: 0
 		lineageTag: 7d68289a-7893-4e32-ba87-383634a6fcba
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Year
 
 		annotation SummarizationSetBy = Automatic
@@ -38,7 +35,7 @@ table Date
 		dataType: int64
 		formatString: 0
 		lineageTag: 365ef48b-74b8-4549-bbfe-3da428c6955c
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Year Quarter Number
 
 		annotation SummarizationSetBy = Automatic
@@ -71,7 +68,7 @@ table Date
 		dataType: int64
 		formatString: 0
 		lineageTag: 17007b8f-45c2-4306-9665-0c4f0c9b7075
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Year Month Number
 
 		annotation SummarizationSetBy = Automatic
@@ -96,7 +93,7 @@ table Date
 		dataType: int64
 		formatString: 0
 		lineageTag: 3d5ca855-2d86-4370-a950-a9cb837c0954
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Month Number
 
 		annotation SummarizationSetBy = Automatic
@@ -121,7 +118,7 @@ table Date
 		dataType: int64
 		formatString: 0
 		lineageTag: 51318e0d-d449-4cc7-88ad-3cb02500c923
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Day of Week Number
 
 		annotation SummarizationSetBy = Automatic
@@ -139,7 +136,7 @@ table Date
 		dataType: int64
 		formatString: 0
 		lineageTag: 1bfce725-5460-419d-b49d-dcbf662b8bd4
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Working Day Number
 
 		annotation SummarizationSetBy = Automatic
